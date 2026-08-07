@@ -11,7 +11,7 @@ public class OuterClass1 {
 
     private int num = 10;
 
-    // 1. 멤버 내부 클ㄹ새ㅡ
+    // 1. 멤버 내부 래스
     class InnerClass{
 
         public void display(){

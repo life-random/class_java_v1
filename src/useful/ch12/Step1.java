@@ -21,7 +21,7 @@ public class Step1 {
         System.out.println("설정한 날짜 : " + birthday);
         System.out.println("생일 요일 : " + birthday.getDayOfWeek());
 
-        // 만걍 한글로 표현라고 싶다면
+        // 만약 한글로 표현하고 싶다면
         System.out.println(birthday.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.KOREAN));
     }
 }
