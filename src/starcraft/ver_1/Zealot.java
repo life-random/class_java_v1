@@ -1,0 +1,78 @@
+package starcraft.ver_1;
+
+public class Zealot {
+
+    private String name; // null
+    private int power;   // 0
+    private int hp;      // 0
+    private boolean alive;
+
+
+    public Zealot(String name) {
+        this.name = name;
+        power = 5;
+        hp = 80;
+        alive = true;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public boolean getAlive() {
+        return alive;
+    }
+
+    // 메서드
+
+    // 1. 질럿이 저글링을 공격한다
+    public void attackZergling(Zergling zergling) {
+        if (alive) {
+            System.out.println(this.name + "이 " + zergling.getName() + "를 공격했습니다");
+            zergling.beAttacked(power);
+        } else {
+            System.out.println("이 캐릭터는 움직일 수 없습니다.");
+        }
+    }
+
+    // 2. 질럿이 마린을 공격합니다
+    public void attackMarine(Marine marine) {
+        if (alive) {
+            System.out.println(this.name + "이 " + marine.getName() + "를 공격했습니다");
+            marine.beAttacked(power);
+        } else {
+            System.out.println("이 캐릭터는 움직일 수 없습니다.");
+        }
+    }
+
+    // 3. 자기 자신(질럿)이 공격을 당합니다
+    public void beAttacked(int power) {
+        if (alive){
+            System.out.println(this.name + "이 공격을 당합니다");
+            this.hp -= power;
+            if (hp <= 0) {
+                alive = false;
+                System.out.println(name + "이 쓰러졌습니다");
+            }
+        } else {
+            System.out.println(name + "은 이미 쓰러졌습니다");
+        }
+    }
+
+    // 4. 내 현재 상태 출력(콘솔) 기능 만들기
+    public void showInfo() {
+        System.out.println("---------상태창---------");
+        System.out.println("이름 : " + name);
+        System.out.println("현재 공격력 : " + power);
+        System.out.println("현재 생명력 : " + hp);
+        System.out.println("현재 상태 : " + ((alive) ? "생존" : "사망"));
+    }
+}
