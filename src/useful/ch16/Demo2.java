@@ -1,20 +1,21 @@
 package useful.ch16;
 
-public class Demo1 {
+class Calculator{
+    public int add(int x, int y){
+        return x + y;
+    }
+
+    public int subtract(int x, int y){
+        return x - y;
+    }
+}
+// 원래 방식 : 두 수를 더하거 나 빼는 기능 을 만들려면 클래스를 설계하고, 객체를 만들고, 메서드를 호출하는
+//             기본적인 세 단계를 거쳐야 한다
+
+public class Demo2 {
     public static void main(String[] args) {
-        // 1. 람다 표현식에 대해 알아보자.
-
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("작업자가 해야 할 일 정의");
-            }
-        }).start();
-
-        // 2. 위 코드를 람다식으로 구현
-        new Thread(() -> System.out.println("여기도 작업자가 해야할 일")).start();
-
-        // 3. 자바 컴파일러는 타입 추론이 가능하다
-        new Thread(() -> System.out.println("작업자가 해야 할 일 정의")).start();
+        Calculator calculator = new Calculator();
+        System.out.println("10 + 5 = " + calculator.add(10, 5));
+        System.out.println("10 - 5 = " + calculator.subtract(10, 5));
     }
 }
