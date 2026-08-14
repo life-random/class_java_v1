@@ -1,4 +1,4 @@
-package client_socket.ch02;
+package socket.client_socket.ch02;
 
 import java.io.BufferedReader;
 import java.io.IOException;

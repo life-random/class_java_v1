@@ -1,4 +1,4 @@
-package client_socket.ch01;
+package socket.client_socket.ch01;
 
 import java.io.IOException;
 import java.io.PrintWriter;

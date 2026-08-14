@@ -1,4 +1,4 @@
-package socket.ch02;
+package socket.server_socket.ch02;
 
 import java.io.*;
 import java.net.ServerSocket;
