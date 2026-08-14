@@ -28,7 +28,7 @@ public class TypingRecord2 {
 
     public static void printRecord() {
         System.out.println("\n 저장된 기록 ");
-        try (FileInputStream fis = new FileInputStream("C:\\cbk\\work_space\\java_class_1\\java_v1\\assets\\typing.txt")) {
+        try (FileInputStream fis = new FileInputStream("assets/typing.txt")) {
             int data;
             while ( (data = fis.read()) != -1 ) {
                 System.out.print((char)data);

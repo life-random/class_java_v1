@@ -28,7 +28,7 @@ public class FileStream1 {
         }
     }
 
-    // 파일에서 덱스트를 읽는 메서드 (문자 기반 스트림 사용)
+    // 파일에서 텍스트를 읽는 메서드 (문자 기반 스트림 사용)
     public static void readFromFile(String fileName){
 
         try (FileReader fr = new FileReader("assets/" + fileName + ".txt")) {

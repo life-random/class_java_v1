@@ -16,10 +16,8 @@ public class ClientFile {
             // socket + PrintWriter : autoFlush 처리 됨
             PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
             for (int i = 0; i < 1; i++) {
-                writer.println((i+1)+"메세지 잘 갔나요?"); // "\n"
+                writer.println((i + 1) + "메세지 잘 갔나요?"); // "\n"
             }
-
-
 
         } catch (UnknownHostException e) {
             throw new RuntimeException(e);
