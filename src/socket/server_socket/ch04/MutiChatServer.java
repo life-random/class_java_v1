@@ -73,7 +73,7 @@ public class MutiChatServer {
                 Socket socket = serverSocket.accept();
                 // 클라이언트가 연결되면 새로운 객체를 생성하고 연결된 소켓 객체 주소값을 해당 클래스 필드에 할당 한다.
                 new ClientHandler(socket).start();
-                System.out.println("클라이언트 접속, 현재 족속자 " + clientWriterList.size() + "명" );
+                System.out.println("클라이언트 접속, 현재 접속자 " + clientWriterList.size() + "명" );
             }
 
         } catch (IOException e) {
