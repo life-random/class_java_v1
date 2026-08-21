@@ -69,6 +69,8 @@ public class SimpleHttpServer {
         server.createContext("/health", new HealthHandler());
         // - http://localhost:8082/api/users
         server.createContext("/api/users", new UserApiHandler());
+        // - http://localhost:8082/api/time
+        server.createContext("/api/time", new TimeHandler());
 
         // 3. 요청을 처리할 스레드 풀 지정 (http 서버는 멀티 스레드 프로그램이라서 미리 생성할 스레드를 지정한다.)
         server.setExecutor(Executors.newFixedThreadPool(THREAD_POOL_SIZE));
